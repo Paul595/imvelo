@@ -4,23 +4,42 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    tools:context=".MainActivity"
+    android:backgroundTint="#4D1CCB00"
+    android:backgroundTintMode="add"
+    android:background="@drawable/loadingtrees"
+    android:theme="@android:style/Theme.NoTitleBar"
+    >
 
+
+    <TextView
+        android:id="@+id/titleText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:text="imvelo"
+        android:textColor="#FFFFFF"
+        android:textSize="65dp"
+        android:layout_marginTop="200dp"
+        android:layout_marginLeft="40dp"
+        />
 
     <com.john.waveview.WaveView
         android:id ="@+id/waveView"
-        android:background="#1CCB00"
+        android:background="#00000000"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_alignParentBottom="true"
-        app:above_wave_color="#00000000"
+        app:above_wave_color="#1CCB00"
         app:blow_wave_color="#00000000"
         app:wave_height="large"
         app:wave_length="large"
         app:wave_hz="fast"
-        app:progress="100"
+        app:progress="45"
+        android:alpha="1.1"
+    >
 
-        />
+    </com.john.waveview.WaveView>
 
     <com.john.waveview.WaveView
         android:id ="@+id/waveView2"
@@ -28,13 +47,15 @@
         android:layout_width="match_parent"
         android:layout_height="595dp"
         android:layout_alignParentBottom="true"
-        app:above_wave_color="#00000000"
-        app:blow_wave_color="#00000000"
+        app:above_wave_color="#1CCB00"
+        app:blow_wave_color="#1CCB00"
         app:wave_height="large"
         app:wave_length="large"
         app:wave_hz="fast"
-        app:progress="100"
+        app:progress="35"
+        android:alpha="1.1"
         />
+
 
     <com.john.waveview.WaveView
         android:id ="@+id/waveView3"
@@ -42,14 +63,16 @@
         android:layout_width="wrap_content"
         android:layout_height="100dp"
         android:layout_alignParentTop="true"
-        app:above_wave_color="#00000000"
-        app:blow_wave_color="#00000000"
+        app:above_wave_color="#1CCB00"
+        app:blow_wave_color="#1CCB00"
         app:wave_height="large"
         app:wave_length="large"
         app:wave_hz="fast"
         app:progress="100"
         android:rotationX="-180"
         android:rotationY="180"
+        android:alpha="1.1"
         />
+
 
 </RelativeLayout>
