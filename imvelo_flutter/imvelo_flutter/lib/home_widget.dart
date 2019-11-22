@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'placeholder_widget.dart';
+import 'camera.dart';
 
 class Home extends StatefulWidget {
   @override
@@ -12,7 +13,7 @@ class _HomeState extends State<Home> {
   int _currentIndex = 0;
   final List<Widget> _children = [
     PlaceholderWidget(Colors.white),
-    PlaceholderWidget(Colors.deepOrange),
+    CodeScanner(),
     PlaceholderWidget(Colors.green)
   ];
 
@@ -28,16 +29,19 @@ class _HomeState extends State<Home> {
         currentIndex: _currentIndex,
         items: [
           BottomNavigationBarItem(
-            icon: Icon(Icons.home),
-            title: Text('Home'),
+            icon: Icon(Icons.insert_chart,size:35),
+            title: Text('History',style: new TextStyle(
+                  color: const Color(0xFF06244e), fontSize: 25.0)),
           ),
           BottomNavigationBarItem(
-            icon: Icon(Icons.mail),
-            title: Text('Messages'),
+            icon: Icon(Icons.camera_alt,size:35),
+            title: Text('Scanner',style: new TextStyle(
+                  color: const Color(0xFF06244e), fontSize: 25.0)),
           ),
           BottomNavigationBarItem(
-            icon: Icon(Icons.person),
-            title: Text('Profile')
+            icon: Icon(Icons.settings,size:35),
+            title: Text('Settings',style: new TextStyle(
+                  color: const Color(0xFF06244e), fontSize: 25.0)),
           )
         ],
       ),
