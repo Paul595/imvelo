@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'placeholder_widget.dart';
-import 'camera.dart';
+import 'package:flutter_barcode_scanner/flutter_barcode_scanner.dart';
+
 
 class Home extends StatefulWidget {
   @override
@@ -10,10 +11,21 @@ class Home extends StatefulWidget {
 }
 
 class _HomeState extends State<Home> {
+
   int _currentIndex = 0;
+  static String _code = "";
   final List<Widget> _children = [
     PlaceholderWidget(Colors.white),
-    CodeScanner(),
+    Container(
+      color: Colors.amber[600],
+      child: Text(
+        'Code: $_code',
+        textAlign: TextAlign.center,
+        overflow: TextOverflow.ellipsis,
+        style: TextStyle(fontWeight: FontWeight.bold),
+      ),
+      
+    ),
     PlaceholderWidget(Colors.green)
   ];
 
@@ -46,11 +58,34 @@ class _HomeState extends State<Home> {
         ],
       ),
     );
+
+   
   }
+
+    Future<String> barcodeResults() async{
+      Future<String> back = FlutterBarcodeScanner.scanBarcode(
+        "#ff6666",
+        "abbrechen",
+        true,
+        ScanMode.DEFAULT
+        );
+        return back;
+    }
+
+    codeGet(){
+      barcodeResults().then((_code){
+        print(_code);
+      });
+    }
+
+
 
   void onTabTapped(int index) {
     setState(() {
       _currentIndex = index;
     }); 
+    if(index == 1){
+      codeGet();
+    }
   }
 }
