@@ -115,13 +115,13 @@ class _MyHomePageState extends State<MyHomePage> {
           padding: EdgeInsets.zero,
           children: <Widget>[
             DrawerHeader(
-              child: Text('Drawer Header'),
+              child: Text('Menü'),
               decoration: BoxDecoration(
                 color: Colors.blue,
               ),
             ),
-            ListTile(
-              title: Text('Item 1'),
+             ListTile(
+              title: Text('Barcode Scanner'),
               onTap: () {
                 // Update the state of the app
                 // ...
@@ -130,7 +130,16 @@ class _MyHomePageState extends State<MyHomePage> {
               },
             ),
             ListTile(
-              title: Text('Item 2'),
+              title: Text('Tipp des Tages'),
+              onTap: () {
+                // Update the state of the app
+                // ...
+                // Then close the drawer
+                Navigator.pop(context);
+              },
+            ),
+            ListTile(
+              title: Text('Einstellungen'),
               onTap: () {
                 // Update the state of the app
                 // ...
