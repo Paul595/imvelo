@@ -1,28 +1,17 @@
 import 'package:flutter/material.dart';
+import 'home_widget.dart';
 
-void main() => runApp(MyApp());
+void main() => runApp(App());
 
-class MyApp extends StatelessWidget {
-  // This widget is the root of your application.
+class App extends StatelessWidget {
   @override
-  Widget build(BuildContext context) {
+   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'ImveloHome',
-      theme: ThemeData(
-        // This is the theme of your application.
-        //
-        // Try running your application with "flutter run". You'll see the
-        // application has a blue toolbar. Then, without quitting the app, try
-        // changing the primarySwatch below to Colors.green and then invoke
-        // "hot reload" (press "r" in the console where you ran "flutter run",
-        // or simply save your changes to "hot reload" in a Flutter IDE).
-        // Notice that the counter didn't reset back to zero; the application
-        // is not restarted.
-        primarySwatch: Colors.green,
-      ),
-      home: MyHomePage(title: 'Imvelo'),
+      title: 'My Flutter App',
+      home: Home(),
     );
   }
+<<<<<<< HEAD
 }
 
 class MyHomePage extends StatefulWidget {
@@ -161,3 +150,6 @@ class _MyHomePageState extends State<MyHomePage> {
     );
   }
 }
+=======
+}
+>>>>>>> 0fd7fcd0b42c2cd273db8c079ca6fe6c1c144ed3
