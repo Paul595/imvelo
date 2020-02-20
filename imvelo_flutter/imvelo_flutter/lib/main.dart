@@ -11,7 +11,6 @@ class App extends StatelessWidget {
       home: Home(),
     );
   }
-<<<<<<< HEAD
 }
 
 class MyHomePage extends StatefulWidget {
@@ -150,6 +149,3 @@ class _MyHomePageState extends State<MyHomePage> {
     );
   }
 }
-=======
-}
->>>>>>> 0fd7fcd0b42c2cd273db8c079ca6fe6c1c144ed3
